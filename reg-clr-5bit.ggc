@@ -1,0 +1,583 @@
+{
+  "version": "1.6",
+  "timestamp": "2026-08-19T18:47:25.698Z",
+  "name": "reg-clr-5bit",
+  "interface": {
+    "inputs": [],
+    "outputs": []
+  },
+  "nextCircuitId": 2,
+  "components": [
+    {
+      "id": "input_1787165208018_rw70wzyc0",
+      "type": "input",
+      "x": 39,
+      "y": 18,
+      "props": {
+        "base": 10,
+        "bits": 5,
+        "rotation": 0,
+        "label": "D",
+        "hasError": false,
+        "hasWarning": false,
+        "errorMessageId": "",
+        "errorDetails": {}
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 1,
+          "y": 0,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "multiplexer_1787165208018_2xu5gzchp",
+      "type": "multiplexer",
+      "x": 44,
+      "y": 17,
+      "props": {
+        "selectorBits": 1,
+        "bits": 5,
+        "label": "",
+        "selectorPosition": "bottom",
+        "rotation": 0,
+        "hasError": false,
+        "hasWarning": false,
+        "errorMessageId": "",
+        "errorDetails": {}
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 0,
+          "y": 1,
+          "direction": "input"
+        },
+        {
+          "name": "1",
+          "x": 0,
+          "y": 2,
+          "direction": "input"
+        },
+        {
+          "name": "sel",
+          "x": 1,
+          "y": 4,
+          "direction": "input"
+        },
+        {
+          "name": "0",
+          "x": 2,
+          "y": 2,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "constant_1787165208018_2ihqfh1a3",
+      "type": "constant",
+      "x": 39,
+      "y": 21,
+      "props": {
+        "value": 0,
+        "base": 10,
+        "bits": 5,
+        "rotation": 0,
+        "label": ""
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 1,
+          "y": 0,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "input_1787165208018_fobmrqcv1",
+      "type": "input",
+      "x": 39,
+      "y": 25,
+      "props": {
+        "base": 10,
+        "bits": 1,
+        "rotation": 0,
+        "label": "CLK"
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 1,
+          "y": 0,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "input_1787165208018_q6pfwqsa3",
+      "type": "input",
+      "x": 39,
+      "y": 28,
+      "props": {
+        "base": 10,
+        "bits": 1,
+        "rotation": 0,
+        "label": "CLR"
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 1,
+          "y": 0,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "input_1787165208018_36v054xlj",
+      "type": "input",
+      "x": 39,
+      "y": 31,
+      "props": {
+        "base": 10,
+        "bits": 1,
+        "rotation": 0,
+        "label": "EN"
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 1,
+          "y": 0,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "or-gate_1787165208018_s0cafotse",
+      "type": "or-gate",
+      "x": 43,
+      "y": 28,
+      "props": {
+        "gateType": "or",
+        "numInputs": 2,
+        "bits": 1,
+        "label": "",
+        "rotation": 0,
+        "invertedInputs": []
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 0,
+          "y": 0,
+          "direction": "input"
+        },
+        {
+          "name": "1",
+          "x": 0,
+          "y": 2,
+          "direction": "input"
+        },
+        {
+          "name": "0",
+          "x": 4,
+          "y": 1,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "register_1787165208018_bv0elwqn7",
+      "type": "register",
+      "x": 50,
+      "y": 18,
+      "props": {
+        "bits": 5,
+        "label": "REG",
+        "rotation": 0
+      },
+      "ports": [
+        {
+          "name": "D",
+          "x": 0,
+          "y": 1,
+          "direction": "input"
+        },
+        {
+          "name": "CLK",
+          "x": 0,
+          "y": 3,
+          "direction": "input"
+        },
+        {
+          "name": "en",
+          "x": 0,
+          "y": 5,
+          "direction": "input"
+        },
+        {
+          "name": "Q",
+          "x": 4,
+          "y": 3,
+          "direction": "output"
+        }
+      ]
+    },
+    {
+      "id": "output_1787165208018_m1qfremnv",
+      "type": "output",
+      "x": 57,
+      "y": 21,
+      "props": {
+        "bits": 5,
+        "base": 10,
+        "rotation": 0,
+        "label": "Q"
+      },
+      "ports": [
+        {
+          "name": "0",
+          "x": 0,
+          "y": 0,
+          "direction": "input"
+        }
+      ]
+    }
+  ],
+  "wires": [
+    {
+      "id": "wire_1787165208018_xb5i034jj",
+      "points": [
+        {
+          "x": 40,
+          "y": 21
+        },
+        {
+          "x": 42,
+          "y": 21
+        },
+        {
+          "x": 42,
+          "y": 19
+        },
+        {
+          "x": 44,
+          "y": 19
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 40,
+          "y": 21
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 44,
+          "y": 19
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 5
+    },
+    {
+      "id": "wire_1787165208018_nimzopfo4",
+      "points": [
+        {
+          "x": 40,
+          "y": 18
+        },
+        {
+          "x": 44,
+          "y": 18
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 40,
+          "y": 18
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 44,
+          "y": 18
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 5
+    },
+    {
+      "id": "wire_1787165208018_0qthim5q4",
+      "points": [
+        {
+          "x": 40,
+          "y": 28
+        },
+        {
+          "x": 43,
+          "y": 28
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 40,
+          "y": 28
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 43,
+          "y": 28
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 1
+    },
+    {
+      "id": "wire_1787165208018_kbhihbdrn",
+      "points": [
+        {
+          "x": 40,
+          "y": 31
+        },
+        {
+          "x": 41,
+          "y": 31
+        },
+        {
+          "x": 41,
+          "y": 30
+        },
+        {
+          "x": 43,
+          "y": 30
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 40,
+          "y": 31
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 43,
+          "y": 30
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 1
+    },
+    {
+      "id": "wire_1787165208018_racoz3m2y",
+      "points": [
+        {
+          "x": 46,
+          "y": 19
+        },
+        {
+          "x": 50,
+          "y": 19
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 46,
+          "y": 19
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 50,
+          "y": 19
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 5
+    },
+    {
+      "id": "wire_1787165208018_iwlsz87p3",
+      "points": [
+        {
+          "x": 40,
+          "y": 25
+        },
+        {
+          "x": 48,
+          "y": 25
+        },
+        {
+          "x": 48,
+          "y": 21
+        },
+        {
+          "x": 50,
+          "y": 21
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 40,
+          "y": 25
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 50,
+          "y": 21
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 1
+    },
+    {
+      "id": "wire_1787165208018_1ghu372a9",
+      "points": [
+        {
+          "x": 47,
+          "y": 29
+        },
+        {
+          "x": 49,
+          "y": 29
+        },
+        {
+          "x": 49,
+          "y": 23
+        },
+        {
+          "x": 50,
+          "y": 23
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 47,
+          "y": 29
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 50,
+          "y": 23
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 1
+    },
+    {
+      "id": "wire_1787165208018_2nliujffr",
+      "points": [
+        {
+          "x": 54,
+          "y": 21
+        },
+        {
+          "x": 57,
+          "y": 21
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 54,
+          "y": 21
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 57,
+          "y": 21
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "12",
+      "bits": 5
+    },
+    {
+      "id": "wire_1787165208018_4onhwmpxs",
+      "points": [
+        {
+          "x": 42,
+          "y": 28
+        },
+        {
+          "x": 42,
+          "y": 22
+        },
+        {
+          "x": 45,
+          "y": 22
+        },
+        {
+          "x": 45,
+          "y": 21
+        }
+      ],
+      "startConnection": {
+        "pos": {
+          "x": 40,
+          "y": 28
+        },
+        "portType": "output"
+      },
+      "endConnection": {
+        "pos": {
+          "x": 45,
+          "y": 21
+        },
+        "portType": "input"
+      },
+      "stepActive": false,
+      "stepStyle": "processing",
+      "value": "0",
+      "bits": 1
+    }
+  ],
+  "wireJunctions": [
+    {
+      "pos": {
+        "x": 42,
+        "y": 28
+      },
+      "sourceWireIndex": 2,
+      "connectedWireId": "wire_1787165208018_4onhwmpxs"
+    }
+  ],
+  "schematicComponents": {}
+}
